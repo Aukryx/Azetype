@@ -1,44 +1,44 @@
 # AzerType
 
-AzerType est une application web interactive conçue pour aider les utilisateurs à améliorer leur vitesse de frappe au clavier. Ce projet est basé sur le cours JavaScript d'OpenClassrooms, avec des fonctionnalités supplémentaires pour enrichir l'expérience utilisateur.
+AzerType is an interactive web application designed to help users improve their typing speed. This project is based on OpenClassrooms' JavaScript course, with additional features to enhance the user experience.
 
-## Fonctionnalités
+## Features
 
-### Fonctionnalités de Base
-- **Mode d'entraînement double** :
-  - Mode "Mots" : Pratique avec des mots individuels
-  - Mode "Phrases" : Pratique avec des phrases complètes
-- **Système de score** : Suivi en temps réel des bonnes réponses
-- **Validation intelligente** : Validation par bouton ou touche Entrée
+### Core Features
+- **Dual Training Modes**:
+  - "Words" Mode: Practice with individual words
+  - "Sentences" Mode: Practice with complete sentences
+- **Scoring System**: Real-time tracking of correct answers
+- **Smart Validation**: Input validation via button click or Enter key
 
-### Fonctionnalités Ajoutées
-- **Chronomètre intégré** :
-  - Démarrage automatique à la première frappe
-  - Affichage précis (minutes:secondes:millisecondes)
-  - Bouton de réinitialisation
-- **Système de partage de score** :
-  - Formulaire de partage personnalisé
-  - Options multiples de partage :
-    - Client de messagerie par défaut
+### Added Features
+- **Integrated Stopwatch**:
+  - Automatically starts on first keystroke
+  - Precise display (minutes:seconds:milliseconds)
+  - Reset button
+- **Score Sharing System**:
+  - Customized sharing form
+  - Multiple sharing options:
+    - Default email client
     - Gmail
-    - Copie du texte dans le presse-papiers
-  - Inclusion d'images dans le message (GIF de célébration et logo)
-- **Validation des formulaires** :
-  - Vérification du nom (minimum 2 caractères)
-  - Validation du format email
-  - Gestion des erreurs avec messages explicites
+    - Copy to clipboard
+  - Image inclusion in message (celebration GIF and logo)
+- **Form Validation**:
+  - Name verification (minimum 2 characters)
+  - Email format validation
+  - Error handling with explicit messages
 
-## Installation et Configuration
+## Installation and Setup
 
-1. Cloner le repository
-2. Assurez-vous d'avoir Go installé sur votre machine
-3. Lancez le serveur :
+1. Clone the repository
+2. Ensure Go is installed on your machine
+3. Start the server:
 ```bash
 go run server.go
 ```
-4. Accédez à l'application via `http://localhost:8080`
+4. Access the application at `http://localhost:8080`
 
-## Structure du Projet
+## Project Structure
 
 ```
 ├── static/
@@ -55,42 +55,92 @@ go run server.go
 └── server.go
 ```
 
-## Utilisation
+## Usage
 
-1. Choisissez votre mode d'entraînement (Mots ou Phrases)
-2. Commencez à taper dans le champ de saisie
-   - Le chronomètre démarre automatiquement à la première frappe
-   - Le mode ne peut plus être changé une fois le chronomètre démarré
-3. Validez votre saisie avec la touche Entrée ou le bouton "Valider"
-4. Une fois l'exercice terminé :
-   - Le chronomètre s'arrête
-   - Le bouton de partage devient actif
-5. Pour partager votre score :
-   - Cliquez sur "Partager"
-   - Remplissez le formulaire avec votre nom et l'email du destinataire
-   - Choisissez votre méthode de partage préférée
+1. Choose your training mode (Words or Sentences)
+2. Start typing in the input field
+   - Stopwatch starts automatically on first keystroke
+   - Mode cannot be changed once the stopwatch starts
+3. Validate your input using Enter key or "Validate" button
+4. Once the exercise is completed:
+   - Stopwatch stops
+   - Share button becomes active
+5. To share your score:
+   - Click "Share"
+   - Fill in the form with your name and recipient's email
+   - Choose your preferred sharing method
 
-## Personnalisation
+## Customization
 
-Le fichier `config.js` contient les listes de mots et de phrases. Vous pouvez les modifier pour adapter l'exercice à vos besoins :
-- `listeMots` : Collection de mots pour le mode "Mots"
-- `listePhrases` : Collection de phrases pour le mode "Phrases"
+The `config.js` file contains word and sentence lists. You can modify these to adapt the exercise to your needs:
+- `listeMots`: Word collection for "Words" mode
+- `listePhrases`: Sentence collection for "Sentences" mode
 
-## Technologies Utilisées
+## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- Go (pour le serveur)
+- Go (for server)
 
-## Améliorations possibles
+## Possible Improvements
 
-- Ajout de niveaux de difficulté
-- Statistiques détaillées (WPM, précision)
-- Mode multijoueur
-- Sauvegarde des scores
-- Plus de modes d'entraînement
+- Add difficulty levels
+- Detailed statistics (WPM, accuracy)
+- Multiplayer mode
+- Score saving
+- Additional training modes
 
-## Licence
+## Features in Detail
 
-Ce projet est basé sur le cours OpenClassrooms avec des améliorations personnelles.
+### Stopwatch
+- High-precision timing
+- Automatic start on first input
+- Format: MM:SS:MS
+- Reset functionality to start over
+
+### Score Sharing
+- Multiple sharing options for flexibility
+- Built-in email templates
+- Customizable messages
+- Integrated image sharing
+- Clipboard support
+
+### Form Validation
+- Real-time input validation
+- Comprehensive error messages
+- Email format checking
+- Minimum length requirements
+
+### User Interface
+- Clean and responsive design
+- Intuitive controls
+- Clear visual feedback
+- Mobile-friendly layout
+
+## Running in Development
+
+1. Clone the repository to your local machine
+2. Navigate to the project directory
+3. Start the Go server:
+   ```bash
+   go run server.go
+   ```
+4. The application will be available at `http://localhost:8080`
+5. For development, you can modify the JavaScript files in the `static/scripts` directory
+6. Refresh the browser to see your changes
+
+## Troubleshooting
+
+Common issues and solutions:
+- If the server won't start, check if port 8080 is already in use
+- If images don't load, verify the correct paths in `script.js`
+- For email sharing issues, ensure proper email client configuration
+
+## License
+
+This project is based on the OpenClassrooms course with personal enhancements.
+
+## Contributing
+
+While this is a personal project, suggestions for improvements are welcome through issues or pull requests.
